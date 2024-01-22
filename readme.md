@@ -54,3 +54,4 @@ The Gardening Journal App is an Android application that serves as a digital com
 
 Explore the codebase and happy gardening!
 
+![home page](./images/screenshot.png)
