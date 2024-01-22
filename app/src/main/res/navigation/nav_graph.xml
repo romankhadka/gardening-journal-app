@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gardenLogFragment">
+    <fragment
+        android:id="@+id/gardenLogFragment"
+        android:name="com.roman.gardeningjournal.ui.gardenlog.GardenLogFragment"
+        android:label="Garden Log">
+        <action
+            android:id="@+id/action_gardenLogFragment_to_plantDetailsFragment"
+            app:destination="@id/plantDetailsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_gardenLogFragment_to_addPlantFragment"
+            app:destination="@id/addPlantFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/plantDetailsFragment"
+        android:name="com.roman.gardeningjournal.ui.plantdetails.PlantDetailsFragment"
+        android:label="Plant Details">
+        <action
+            android:id="@+id/action_plantDetailsFragment_to_gardenLogFragment"
+            app:destination="@id/gardenLogFragment" />
+        <argument
+            android:name="plantId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPlantFragment"
+        android:name="com.roman.gardeningjournal.ui.gardenlog.AddPlantFragment"
+        android:label="Add Plant" />
+</navigation>

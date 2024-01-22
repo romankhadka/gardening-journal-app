@@ -1,0 +1,80 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeae7"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:padding="4dp"
+                android:src="@drawable/arrow_left" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/imgBack"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="Plant Details"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:context=".ui.plantdetails.PlantDetailsFragment"
+            tools:ignore="HardcodedText">
+
+            <TextView
+                android:id="@+id/tvPlantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rose"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPlantType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type: Flower"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvPlantWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Watering 2 days"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvPlantDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Planting Date: 2023-01-01"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
